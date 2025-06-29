@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Price Comparison</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏨 Hotel Price Comparison</h1>
+    <form id="search-form">
+      <input type="text" placeholder="Enter city or location..." required />
+      <input type="date" />
+      <input type="date" />
+      <input type="number" placeholder="Guests" min="1" />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <section class="hotel-card">
+      <h2>Marriott Downtown NYC</h2>
+      <p>📍 New York, NY</p>
+      <div class="prices">
+        <div class="price">Booking.com: <strong>$220</strong></div>
+        <div class="price">Expedia: <strong>$215</strong></div>
+        <div class="price">Hotels.com: <strong>$225</strong></div>
+      </div>
+      <a href="#" class="book-btn">Book Now</a>
+    </section>
+
+    <section class="hotel-card">
+      <h2>Hilton Times Square</h2>
+      <p>📍 New York, NY</p>
+      <div class="prices">
+        <div class="price">Booking.com: <strong>$190</strong></div>
+        <div class="price">Expedia: <strong>$195</strong></div>
+        <div class="price">Hotels.com: <strong>$188</strong></div>
+      </div>
+      <a href="#" class="book-btn">Book Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 HotelCompare. All rights reserved.</p>
+  </footer>
+</body>
+</html>
