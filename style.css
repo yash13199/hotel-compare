@@ -1,68 +1,77 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
 }
 
 header {
   background: #3a86ff;
-  color: white;
   padding: 20px;
+  color: white;
   text-align: center;
 }
 
-form {
+.search-bar {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-form input,
-form button {
+.search-bar input,
+.search-bar button {
   padding: 10px;
-  margin: 5px;
   border: none;
   border-radius: 5px;
 }
 
-form input {
-  width: 180px;
-}
-
-form button {
+.search-bar button {
   background: #ffbe0b;
-  color: black;
   cursor: pointer;
 }
 
-main {
-  padding: 20px;
+.filters {
+  background: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.hotel-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
 }
 
 .hotel-card {
   background: white;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.hotel-card h2 {
-  margin: 0;
+.hotel-card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
 }
 
-.prices {
-  margin: 10px 0;
+.hotel-info {
+  padding: 15px;
 }
 
-.price {
-  margin: 5px 0;
+.hotel-info h2 {
+  margin-top: 0;
 }
 
 .book-btn {
   display: inline-block;
-  padding: 10px 20px;
+  margin-top: 10px;
+  padding: 10px 15px;
   background: #06d6a0;
   color: white;
   text-decoration: none;
