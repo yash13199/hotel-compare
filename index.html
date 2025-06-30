@@ -1,55 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stayvina Hotel Search</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StayVina | Hotel Search</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 font-sans text-gray-800">
 
-  <header>
-    <h1>Stayvina</h1>
-    <form class="search-bar">
-      <input type="text" placeholder="Enter location" required>
-      <input type="date" required>
-      <input type="number" placeholder="Guests" min="1" required>
-      <button type="submit">Search</button>
-    </form>
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-orange-500">StayVina</h1>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#" class="text-gray-700 hover:text-orange-500 font-medium">Hotels</a>
+      <a href="#" class="text-gray-700 hover:text-orange-500">Deals</a>
+      <a href="#" class="text-gray-700 hover:text-orange-500">Support</a>
+    </nav>
   </header>
 
-  <section class="filters">
-    <span>Showing results for <strong>New York</strong></span>
-    <select>
-      <option>Sort by Price</option>
-      <option>Sort by Rating</option>
-    </select>
+  <!-- Hero / Search Section -->
+  <section class="h-[400px] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?hotel,travel');">
+    <div class="bg-white bg-opacity-90 rounded-lg shadow-xl p-6 w-full max-w-3xl">
+      <h2 class="text-xl font-bold mb-4 text-gray-700">Search for Hotels</h2>
+      <form class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" placeholder="Destination or Hotel name" class="w-full border px-4 py-2 rounded-md" />
+          <input type="text" placeholder="Guests / Rooms" class="w-full border px-4 py-2 rounded-md" />
+          <input type="date" class="w-full border px-4 py-2 rounded-md" />
+          <input type="date" class="w-full border px-4 py-2 rounded-md" />
+        </div>
+        <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md font-semibold hover:bg-orange-600 transition">Search Hotels</button>
+      </form>
+    </div>
   </section>
 
-  <main class="hotel-list">
-    <div class="hotel-card">
-      <img src="https://via.placeholder.com/350x200" alt="Hotel Image">
-      <div class="hotel-info">
-        <h2>Hilton Midtown</h2>
-        <p>⭐⭐⭐⭐ | Manhattan, NY</p>
-        <p>$215 / night</p>
-        <a href="#" class="book-btn">Book Now</a>
-      </div>
-    </div>
+  <!-- Hotel Listings -->
+  <section class="px-6 py-12 bg-white">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Top Hotel Deals</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <div class="hotel-card">
-      <img src="https://via.placeholder.com/350x200" alt="Hotel Image">
-      <div class="hotel-info">
-        <h2>Marriott Downtown</h2>
-        <p>⭐⭐⭐ | New York, NY</p>
-        <p>$189 / night</p>
-        <a href="#" class="book-btn">Book Now</a>
+      <!-- Hotel 1 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?hotel,luxury" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Grand Palace Hotel</h3>
+          <p class="text-sm text-gray-600">New York, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$199</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$202</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$195</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
       </div>
-    </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Stayvina. All rights reserved.</p>
+      <!-- Hotel 2 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?resort,pool" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Oceanview Resort</h3>
+          <p class="text-sm text-gray-600">Miami, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$169</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$165</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$159</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?hotel,room" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">City Comfort Inn</h3>
+          <p class="text-sm text-gray-600">Chicago, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$129</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$130</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$125</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 4 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?hotel,city" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Urban Stay Suites</h3>
+          <p class="text-sm text-gray-600">San Francisco, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$189</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$185</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$179</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 5 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?hotel,sunset" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Sunset Paradise</h3>
+          <p class="text-sm text-gray-600">Los Angeles, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$219</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$215</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$210</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 6 -->
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+        <img src="https://source.unsplash.com/400x250/?hotel,vacation" class="w-full h-48 object-cover" alt="Hotel Image">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Mountain Retreat</h3>
+          <p class="text-sm text-gray-600">Aspen, USA</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <div class="flex justify-between"><span>Booking.com</span><span class="text-orange-500 font-bold">$249</span></div>
+            <div class="flex justify-between"><span>Expedia</span><span class="text-orange-500 font-bold">$245</span></div>
+            <div class="flex justify-between"><span>Agoda</span><span class="text-orange-500 font-bold">$239</span></div>
+          </div>
+          <p class="mt-2 text-green-600 font-medium text-sm">Best deal from Agoda</p>
+          <button class="mt-3 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Book Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 mt-10 py-4">
+    © 2025 StayVina | Powered by Travel APIs
   </footer>
 
 </body>
